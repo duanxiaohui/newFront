@@ -9,7 +9,8 @@ import app from '../../lib/app';
 import dataService from '../../common/dataService';
 import MyInput from '../public/Input';
 import MySelect from '../public/Select';
- import $ from 'webpack-zepto';
+import $ from 'webpack-zepto';
+import DocumentTitle from 'react-document-title';
 class AppComponent extends React.Component {
 
   constructor(props) {
@@ -211,7 +212,7 @@ class AppComponent extends React.Component {
       this.getProvinceInfo();
     }
     //document.title = '新建收货地址';
-    $('title').html("新建收货地址");
+    //$('title').html("新建收货地址");
   }
   usernameChange(username,error){
     this.setState({username: username,nameError:error});
@@ -325,17 +326,15 @@ class AppComponent extends React.Component {
             </div>
           </div>
           <a
-  href="javascript:;"
-  className="operate"
-  id="address_submit" onClick={this.submitForm.bind(this)}>保存</a>
+            href="javascript:;"
+            className="operate"
+            id="address_submit" onClick={this.submitForm.bind(this)}>保存</a>
           <a
-  href="javascript:;"
-  id="address_delete"
-  className="new-abtn-type new-mg-t15" onClick={this.deleteAddr.bind(this)}>删除此地址</a>
+            href="javascript:;"
+            id="address_delete"
+            className="new-abtn-type new-mg-t15" onClick={this.deleteAddr.bind(this)}>删除此地址</a>
         </div>
     );
-
-
   }
 }
 

@@ -17,4 +17,4 @@ const rootEl =document.getElementById('app');
 
 logger.log("main", "start rendering the app..." );
 
-ReactDom.render( <Router routes={routes} history={hashHistory}/>, rootEl);
+ReactDom.render(<Router routes={routes} history={hashHistory}/>, rootEl);

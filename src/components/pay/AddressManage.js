@@ -7,6 +7,7 @@ import app from '../../lib/app';
 import dataService from '../../common/dataService';
 let noAddImage = require('../../images/noAdd.png');
 import $ from 'webpack-zepto';
+import DocumentTitle from 'react-document-title';
 class AppComponent extends React.Component {
 
   constructor(props) {
@@ -47,7 +48,7 @@ class AppComponent extends React.Component {
     // }
     this.getUserAddInfo();
     //document.title = '地址管理';
-    $('title').html("地址管理");
+    //$('title').html("地址管理");
 
   }
 
